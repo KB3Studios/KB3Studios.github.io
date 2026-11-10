@@ -1,0 +1,94 @@
+/* KB3 Studios brand: brushed silver + cyan glow, taken from the logo.
+   Change the --kb3-* values to re-skin the whole site. */
+:root {
+  --kb3-cyan: #00c8f0;
+  --kb3-cyan-deep: #0086a8;
+  --kb3-silver: #c9d1d9;
+
+  /* Light mode: deeper cyan so links stay readable on white */
+  --vp-c-brand-1: var(--kb3-cyan-deep);
+  --vp-c-brand-2: #0098bd;
+  --vp-c-brand-3: #00718f;
+  --vp-c-brand-soft: rgba(0, 150, 190, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #6b7785 0%, #0086a8 100%);
+  --vp-home-hero-image-background-image: radial-gradient(circle, rgba(0, 200, 240, 0.35) 0%, rgba(0, 200, 240, 0) 70%);
+  --vp-home-hero-image-filter: blur(56px);
+
+  --vp-button-brand-bg: var(--kb3-cyan-deep);
+  --vp-button-brand-hover-bg: #0098bd;
+  --vp-button-brand-active-bg: #00718f;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+}
+
+.dark {
+  --vp-c-brand-1: var(--kb3-cyan);
+  --vp-c-brand-2: #3fd6f5;
+  --vp-c-brand-3: #00a8cc;
+  --vp-c-brand-soft: rgba(0, 200, 240, 0.14);
+
+  --vp-c-bg: #0d1014;
+  --vp-c-bg-alt: #080a0d;
+  --vp-c-bg-soft: #151a20;
+  --vp-c-bg-elv: #151a20;
+
+  --vp-home-hero-name-background: linear-gradient(120deg, #e8edf2 0%, #9aa6b2 45%, #00c8f0 100%);
+
+  --vp-button-brand-bg: var(--kb3-cyan);
+  --vp-button-brand-hover-bg: #3fd6f5;
+  --vp-button-brand-active-bg: #00a8cc;
+  --vp-button-brand-text: #04161c;
+  --vp-button-brand-hover-text: #04161c;
+}
+
+/* Navbar logo is wide (includes "STUDIOS"), so give it room */
+.VPNavBarTitle .logo { height: 34px; width: auto; }
+
+/* Hero logo: wide artwork, keep it large and glowing */
+.VPHero .image-src {
+  max-width: 420px;
+  max-height: none;
+  filter: drop-shadow(0 0 24px rgba(0, 200, 240, 0.25));
+}
+@media (min-width: 960px) {
+  .VPHero .image-src { max-width: 520px; }
+}
+
+/* Feature cards: subtle cyan edge on hover */
+.VPFeature { transition: border-color 0.2s, box-shadow 0.2s; }
+.VPFeature.link:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 1px var(--vp-c-brand-soft), 0 8px 28px rgba(0, 200, 240, 0.08);
+}
+
+/* Item icon tables */
+.vp-doc img.item-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+/* Resource cards on the getting-started page */
+.kb3-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.kb3-cards a {
+  display: block;
+  padding: 18px 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  text-decoration: none !important;
+  transition: border-color 0.2s;
+}
+.kb3-cards a:hover { border-color: var(--vp-c-brand-1); }
+.kb3-cards strong { display: block; color: var(--vp-c-text-1); margin-bottom: 4px; }
+.kb3-cards span { color: var(--vp-c-text-2); font-size: 14px; line-height: 1.5; }
