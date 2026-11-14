@@ -21,6 +21,8 @@ Resmon depends on hardware, player count, other resources and your inventory or 
 
 **Weapon Handling.** Since 1.1.1, player state, job, walk style and crouch recovery checks run every 100–250 ms instead of every frame. The sling display rebuilds only when the inventory, equipped weapon or `/sling` preference changes.
 
+**Nova HUD.** Players pick an update rate in *General*: Smooth, Balanced (default) or Saver. Saver updates less often for lower CPU use. The UI uses plain HTML, CSS and JS, with no framework bundle.
+
 **Metal Detecting.** Since 1.2.2, player state and beach zone checks run every 250 ms while the detector is out, and the inventory check runs every 2 seconds. Nothing runs while the detector is put away.
 
 ## Measuring

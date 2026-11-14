@@ -40,4 +40,9 @@ features:
     details: Proximity-beep beach detecting, server-checked digging, five tiers of beach bags, a dealer and an in-game loot editor.
     link: /metal-detecting/
     linkText: Read the docs
+  - icon: 🧭
+    title: Nova HUD
+    details: A fully customisable HUD with status icons and custom backgrounds, 11 speedometers, a compass with postals, a layout editor and a full stress system.
+    link: /nova-hud/
+    linkText: Read the docs
 ---

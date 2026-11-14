@@ -20,6 +20,7 @@ Resource-specific extras:
 | Lean | The output of `/leandiag` |
 | Weapon Handling | The F8 output of `/slingdebug` or `/crouchdebug` |
 | Metal Detecting | Your `Config.Framework` and `Config.Inventory` values |
+| Nova HUD | The F8 start-up lines (seatbelt mode, postals loaded), and `/hudveh` output for vehicle light issues |
 
 ::: danger Never post secrets
 Don't post database passwords, server keys, webhook URLs or player data in public channels.

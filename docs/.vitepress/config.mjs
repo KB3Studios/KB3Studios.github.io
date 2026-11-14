@@ -38,6 +38,7 @@ export default defineConfig({
           { text: 'Lean System', link: '/lean/' },
           { text: 'Weapon Handling', link: '/weapon-handling/' },
           { text: 'Metal Detecting', link: '/metal-detecting/' },
+          { text: 'Nova HUD', link: '/nova-hud/' },
         ],
       },
       { text: 'Performance', link: '/guide/performance' },
@@ -62,6 +63,7 @@ export default defineConfig({
             { text: 'Lean System', link: '/lean/' },
             { text: 'Weapon Handling', link: '/weapon-handling/' },
             { text: 'Metal Detecting', link: '/metal-detecting/' },
+            { text: 'Nova HUD', link: '/nova-hud/' },
           ],
         },
       ],
@@ -169,6 +171,38 @@ export default defineConfig({
             { text: 'Updating', link: '/metal-detecting/updating' },
             { text: 'Troubleshooting', link: '/metal-detecting/troubleshooting' },
             { text: 'Changelog', link: '/metal-detecting/changelog' },
+          ],
+        },
+      ],
+      '/nova-hud/': [
+        {
+          text: 'Nova HUD',
+          items: [
+            { text: 'Overview', link: '/nova-hud/' },
+            { text: 'Installation', link: '/nova-hud/installation' },
+            { text: 'Configuration', link: '/nova-hud/configuration' },
+            { text: 'Commands & controls', link: '/nova-hud/commands' },
+            { text: 'Settings menu', link: '/nova-hud/settings' },
+          ],
+        },
+        {
+          text: 'Features',
+          items: [
+            { text: 'Vehicle', link: '/nova-hud/vehicle' },
+            { text: 'Map & postals', link: '/nova-hud/map' },
+            { text: 'Weapons', link: '/nova-hud/weapons' },
+            { text: 'Stress', link: '/nova-hud/stress' },
+          ],
+        },
+        {
+          text: 'Developers',
+          items: [{ text: 'Exports & events', link: '/nova-hud/developers' }],
+        },
+        {
+          text: 'Help',
+          items: [
+            { text: 'Troubleshooting', link: '/nova-hud/troubleshooting' },
+            { text: 'Changelog', link: '/nova-hud/changelog' },
           ],
         },
       ],

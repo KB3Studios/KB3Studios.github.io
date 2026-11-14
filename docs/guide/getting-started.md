@@ -7,23 +7,24 @@ All KB3 resources share the same basics. Read this page once, then go to the gui
   <a href="../lean/"><strong>Lean System</strong><span>Mixing scene, cups, effects and EMS prescriptions.</span></a>
   <a href="../weapon-handling/"><strong>Weapon Handling</strong><span>Slings, carry movement, crouch and placement editor.</span></a>
   <a href="../metal-detecting/"><strong>Metal Detecting</strong><span>Beach detecting, digging, beach bags and a dealer.</span></a>
+  <a href="../nova-hud/"><strong>Nova HUD</strong><span>Custom status icons, speedometers, minimap, layout editor and stress.</span></a>
 </div>
 
 ## Shared requirements
 
-| Requirement | Admin Panel | Lean | Weapon Handling | Metal Detecting |
-| --- | :---: | :---: | :---: | :---: |
-| OneSync | ✅ | ✅ | ✅ | ✅ |
-| [ox_lib](https://github.com/overextended/ox_lib) | ✅ | ✅ | ✅ | ✅ |
-| [oxmysql](https://github.com/overextended/oxmysql) | ✅ | ✅ | — | — |
-| Qbox / QBCore / ESX Legacy | ✅ | ✅ | ✅ | ✅ |
-| SQL import | Automatic | `schema.sql` | None | ESX default inventory only |
-| New inventory items | — | 24 | — | 35 |
+| Requirement | Admin Panel | Lean | Weapon Handling | Metal Detecting | Nova HUD |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| OneSync | ✅ | ✅ | ✅ | ✅ | — |
+| [ox_lib](https://github.com/overextended/ox_lib) | ✅ | ✅ | ✅ | ✅ | — |
+| [oxmysql](https://github.com/overextended/oxmysql) | ✅ | ✅ | — | — | — |
+| Qbox / QBCore / ESX Legacy | ✅ | ✅ | ✅ | ✅ | ✅ (or standalone) |
+| SQL import | Automatic | `schema.sql` | None | ESX default inventory only | None |
+| New inventory items | — | 24 | — | 35 | Optional (3 stress relief items) |
 
 ## The golden rules
 
 ::: warning Keep the folder names
-Every resource must keep its original folder name: `kb3_adminpanel`, `kb3_lean`, `kb3_weaponhandling` and `kb3_metaldetect`. Inventory item exports and other resources call these by name, and renaming the folder breaks them.
+Every resource must keep its original folder name: `kb3_adminpanel`, `kb3_lean`, `kb3_weaponhandling`, `kb3_metaldetect` and `kb3_novahud`. Inventory item exports and other resources call these by name, and renaming the folder breaks them.
 :::
 
 1. **Start order matters.** Always `ensure` ox_lib, oxmysql, your framework and your inventory **before** any KB3 resource.
@@ -46,7 +47,9 @@ add_ace resource.kb3_adminpanel command.profiler allow
 add_ace group.admin kb3_lean.admin allow
 add_ace group.admin kb3_weaponhandling.admin allow
 add_ace group.admin kb3.metaldetect.loot allow
+add_ace group.admin command.setstress allow
 
+ensure kb3_novahud
 ensure kb3_adminpanel
 ensure kb3_lean
 ensure kb3_weaponhandling
@@ -63,6 +66,7 @@ ensure kb3_metaldetect
 | `kb3_lean.admin` | Lean | `/leanadmin`, `/leandiag`, `/leanaudit` |
 | `kb3_weaponhandling.admin` | Weapon Handling | Shared default sling placements (`/slingadmin`) |
 | `kb3.metaldetect.loot` | Metal Detecting | `/detectorloot` loot editor |
+| `command.setstress` | Nova HUD | `/setstress` |
 
 ## Open Source edition
 
